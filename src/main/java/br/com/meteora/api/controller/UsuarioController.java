@@ -30,5 +30,12 @@ public class UsuarioController {
     @Transactional
     public void atualizar(@RequestBody DadosAtualizarUsuario dados) {
         UsuarioModel usuario = repository.getReferenceById(dados.id());
+        usuario.atualizarInformacoes(dados);
+    }
+
+    @DeleteMapping("/{id}")
+    @Transactional
+    public void excluir(@PathVariable Long id) {
+        repository.deleteById(id);
     }
 }

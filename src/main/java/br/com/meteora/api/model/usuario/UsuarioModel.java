@@ -47,7 +47,7 @@ public class UsuarioModel {
             this.dataDeNascimento = dados.dataDeNascimento();
         }
         if (dados.endereco() != null) {
-            this.endereco.atualizarEndereco = dados.endereco();
+            this.endereco.atualizarEndereco(dados.endereco());
         }
     }
 
