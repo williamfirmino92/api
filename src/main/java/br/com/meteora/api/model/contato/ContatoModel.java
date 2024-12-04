@@ -10,6 +10,7 @@ import lombok.*;
 @Table(name = "contatos")
 @Entity
 @Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
@@ -25,6 +26,16 @@ public class ContatoModel {
     // private String estado;
     private String comentario;
     private Boolean concorda;
+    
+    public ContatoModel(String email, String nome, String cidade, String comentario, Boolean concorda) {
+        this.email = email;
+        this.nome = nome;
+        this.cidade = cidade;
+        this.comentario = comentario;
+        this.concorda = concorda;
+    }
+
+
     
 
 }
